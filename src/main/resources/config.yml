@@ -1,0 +1,15 @@
+#########################################################
+#                                                       #
+#               Plugin by Marvin Leiers                 #
+#             https://www.marvinleiers.de               #
+#                                                       #
+#########################################################
+
+# Show plugin behaviour in console (logging)
+enable-logging: true
+
+# Name of the sky-block world
+world-name: "sky-block"
+
+# Message that appears when a player performs an action that requires them to don't be part of an island
+message-already-has-island: "§cYou already have an island!"

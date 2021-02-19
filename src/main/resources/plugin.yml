@@ -1,0 +1,9 @@
+name: SkyBlockTLT
+version: ${project.version}
+main: de.marvinleiers.skyblocktlt.SkyBlockTLT
+api-version: 1.16
+authors: [ Marvin_Leiers ]
+website: https://www.marvinleiers.de
+
+commands:
+  skyblock:

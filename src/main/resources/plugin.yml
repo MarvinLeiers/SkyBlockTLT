@@ -6,4 +6,5 @@ authors: [ Marvin_Leiers ]
 website: https://www.marvinleiers.de
 
 commands:
-  skyblock:
+  island:
+    aliases: is

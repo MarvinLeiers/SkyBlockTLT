@@ -13,3 +13,12 @@ world-name: "sky-block"
 
 # Message that appears when a player performs an action that requires them to don't be part of an island
 message-already-has-island: "§cYou already have an island!"
+
+# Message that appears when a player performs an action that requires them to own an island.
+message-dont-has-island: "§cYou don't have an island!"
+
+# Message that appears when a player got a new island
+message-new-island: "§aYou have a new island! Type /is home to visit it!"
+
+# Blocks between each island
+island-distance: 5000

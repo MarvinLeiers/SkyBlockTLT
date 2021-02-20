@@ -4,6 +4,7 @@ import de.marvinleiers.mplugin.MPlugin;
 import de.marvinleiers.mplugin.commands.Subcommand;
 import de.marvinleiers.mplugin.player.MPlayer;
 import de.marvinleiers.skyblocktlt.SkyBlockTLT;
+import de.marvinleiers.skyblocktlt.skyblock.Island;
 import org.bukkit.entity.Player;
 
 public class CreateIsland extends Subcommand
@@ -23,13 +24,13 @@ public class CreateIsland extends Subcommand
     @Override
     public String getSyntax()
     {
-        return "/skyblock create";
+        return "/island create";
     }
 
     @Override
     public String getPermission()
     {
-        return "skyblock.create";
+        return "island.create";
     }
 
     @Override
@@ -43,6 +44,9 @@ public class CreateIsland extends Subcommand
             return;
         }
 
+        Island island = SkyBlockTLT.getIslandManager().getNewIsland();
+        island.setOwner(mPlayer);
 
+        mPlayer.sendMessage(SkyBlockTLT.getInstance().getConfig().getString("message-new-island"));
     }
 }

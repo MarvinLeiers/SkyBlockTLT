@@ -13,7 +13,6 @@ public class PlayerJoinListener implements Listener
     {
         Player player = event.getPlayer();
 
-
-        /* TODO: REMOVE */ player.teleport(SkyBlockTLT.getSkyblockWorld().getSpawnLocation());
+        SkyBlockTLT.getIslandManager().loadIsland(SkyBlockTLT.getPlayerHandler().getPlayer(player));
     }
 }

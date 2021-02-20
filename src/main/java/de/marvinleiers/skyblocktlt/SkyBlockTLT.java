@@ -3,6 +3,7 @@ package de.marvinleiers.skyblocktlt;
 import de.marvinleiers.mplugin.MPlugin;
 import de.marvinleiers.skyblocktlt.commands.SkyBlockCommand;
 import de.marvinleiers.skyblocktlt.listeners.PlayerJoinListener;
+import de.marvinleiers.skyblocktlt.skyblock.IslandManager;
 import de.marvinleiers.skyblocktlt.worldgeneration.SkyBlockWorldGenerator;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -21,7 +22,7 @@ public final class SkyBlockTLT extends MPlugin
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
         createDefaultSkyWorld();
 
-        new SkyBlockCommand("skyblock");
+        new SkyBlockCommand("island");
     }
 
     @Override
@@ -44,6 +45,11 @@ public final class SkyBlockTLT extends MPlugin
             skyblockWorld = Bukkit.getWorld(worldName);
             log("World loaded");
         }
+    }
+
+    public static IslandManager getIslandManager()
+    {
+        return IslandManager.getInstance();
     }
 
     public static SkyBlockTLT getInstance()
